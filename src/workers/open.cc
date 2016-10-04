@@ -26,7 +26,7 @@ void OpenWorker::Execute() {
 	}
 	
 	assert(sqlite3_db_mutex(db->db_handle) == NULL);
-	sqlite3_busy_timeout(db->db_handle, 5000);
+	sqlite3_busy_timeout(db->db_handle, 10000);
 	sqlite3_limit(db->db_handle, SQLITE_LIMIT_LENGTH, std::min(max_buffer_size, max_string_size));
 	sqlite3_limit(db->db_handle, SQLITE_LIMIT_SQL_LENGTH, max_string_size);
 	sqlite3_limit(db->db_handle, SQLITE_LIMIT_COLUMN, 0x7fffffff);
