@@ -23,6 +23,9 @@
             '-Os',
             '-DDEBUG'
           ],
+          'OTHER_CFLAGS': [
+            '-DHAVE_USLEEP=1'
+          ],
           'GCC_OPTIMIZATION_LEVEL': '0',
           'GCC_GENERATE_DEBUGGING_SYMBOLS': 'YES'
         },
@@ -41,6 +44,9 @@
           'OTHER_CPLUSPLUSFLAGS!': [
             '-Os',
             '-O2'
+          ],
+          'OTHER_CFLAGS': [
+            '-DHAVE_USLEEP=1'
           ],
           'GCC_OPTIMIZATION_LEVEL': '3',
           'GCC_GENERATE_DEBUGGING_SYMBOLS': 'NO',
